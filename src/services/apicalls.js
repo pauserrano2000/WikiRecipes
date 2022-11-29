@@ -14,6 +14,11 @@ import axios from 'axios';
      return axios.get(`${apiRoot}/${apiKey}/lookup.php?i=${id}`);
  };
 
+ export const getCategories = async () => {
+
+    return axios.get(`${apiRoot}/${apiKey}/categories.php`);
+};
+
  export const getMeals = async (category) => {
 
     return axios.get(`${apiRoot}/${apiKey}/filter.php?c=${category}`);
