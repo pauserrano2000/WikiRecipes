@@ -11,10 +11,8 @@ import MealItem from "../../Components/MealItem/MealItem";
 const Meals = () => {
   const navigate = useNavigate();
   const [meals, setMeals] = useState([]);
-  const [categories, setCategories] = useState([
-    { idCategory: "1", strCategory: "Beef" },
-  ]);
-  const [category, setCategory] = useState("Beef");
+  const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState("Beef"); //default category to search
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -41,16 +39,18 @@ const Meals = () => {
 
   return (
     <div className="meals-design">
-      <div className="select-container">
-        <select className="select" value={category} onChange={selectHandler}>
-          {categories.map((category) => (
-            <option key={category.idCategory} value={category.strCategory}>
-              {" "}
-              {category.strCategory}
-            </option>
-          ))}
-        </select>
-      </div>
+      {categories.length !== 0 && (
+        <div className="select-container">
+          <select className="select" value={category} onChange={selectHandler}>
+            {categories.map((category) => (
+              <option key={category.idCategory} value={category.strCategory}>
+                {" "}
+                {category.strCategory}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
       {isLoading && <p className="loading-design">IS LOADING...</p>}
       {!isLoading && (
         <MealsContainer>
