@@ -1,0 +1,34 @@
+.meal-item-design{
+    height: 15em;
+
+    width: 10em;
+
+    margin:1em;
+
+    background-color:  rgb(197, 184, 184);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    cursor: pointer;
+}
+
+.meal-title{
+    font-size: 1em;
+    color: rgb(21, 13, 13);
+    font-weight: bolder;
+    
+}
+.meal-image{
+    height: 12em;
+    transition: 0.5s;
+}
+
+.meal-image:hover{
+    height: 15em;
+    transition: 0.5s;
+}
+

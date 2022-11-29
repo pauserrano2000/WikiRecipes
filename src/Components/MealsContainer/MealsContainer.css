@@ -1,0 +1,15 @@
+.meals-container-design{
+    height: 80vh;
+    width: 60vw;
+
+
+    background-color: rgb(197, 184, 184);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    overflow:auto;
+}

@@ -1,0 +1,44 @@
+.homeDesign {
+
+    height: 90vh;
+
+    width: 100vw;
+
+    background-color: rgb(197, 184, 184);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentDesign {
+    color: rgb(21, 13, 13);
+    font-size: 10em;
+}
+
+.contentDesign:hover {
+    font-size: 11em;
+    transition: 0.5s;
+}
+.buttoncontainerDesign{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttonDesign {
+    border: 0.3em solid rgb(147, 94, 94);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: rgb(21, 13, 13);
+    font-size: 2em;
+    margin: 2em;
+    cursor: pointer;
+}
+
+.buttonDesign:hover {
+    background-color:rgb(255, 255, 255);
+    font-size: 3em;
+    transition: 0.5s;
+}
