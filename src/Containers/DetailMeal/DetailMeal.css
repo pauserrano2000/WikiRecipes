@@ -1,46 +1,48 @@
 .detailMealDesign {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(197, 184, 184);
+}
 
-    height: 42em;
-    width: 30em;
-
+.collumns {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1em;
+    padding: 2em;
+}
 
-    color: white;
-    font-weight: bold;
+.leftSide {
+    width: 40%;
+}
 
+.rightSide {
+    width: 60%;
+    padding-left: 2em;
 }
 
 
 .titleDesign {
-    font-size: 2rem;
-    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    padding: 0.5em;
 }
 
 .detailPic img {
-    height: 26em;
-    width: 20em;
-    object-fit: cover;
+    width: 90%;
+    object-fit: contain;
 }
 
-.sinopseDesign {
-    font-size: 1.5rem;
-    text-align: left !important;
+.categoryDesign {
+    display: inline-flex;
+    padding: 1em;
+}
+
+.textDesign {
+    padding: 1em;
 }
 
 .descriptionDesign {
-    margin-top: 1em;
-    white-space: pre-line;
-    width: 28em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #ffffffB3;
+    line-height: 1.6;
+    text-align: initial;
 }
 
-.descriptionDesign:hover {
-    overflow: visible;
-    -ms-text-size-adjust: 50em;
+h2 {
+    text-align: left;
 }
