@@ -59,8 +59,8 @@ const Meals = () => {
               key={meal.idMeal}
               image={meal.strMealThumb}
               title={meal.strMeal}
-              onClick={() => navigate(`/detail/${meal.idMeal}`)}
-              onDelete={() => onDeleteHandler(meal.idMeal)}
+              onClick={(e) => navigate(`/detail/${meal.idMeal}`)}
+              onDelete={(e) => onDeleteHandler(meal.idMeal)}
             />
           ))}
         </MealsContainer>
