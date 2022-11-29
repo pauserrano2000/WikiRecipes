@@ -11,11 +11,11 @@ import MealItem from "../../Components/MealItem/MealItem";
 const Meals = () => {
   const navigate = useNavigate();
   const [meals, setMeals] = useState([]);
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Beef");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getMeals()
+    getMeals(category)
       .then((res) => setMeals(res.data.results))
       .catch((error) => console.log(error));
     setIsLoading(false)
