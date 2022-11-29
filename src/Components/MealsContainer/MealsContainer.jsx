@@ -1,6 +1,6 @@
 import "./MealsContainer.css";
 
-const MovieContainer = (props) => {
+const MealsContainer = (props) => {
     return( 
         <div className="meals-container-design">
             {props.children}

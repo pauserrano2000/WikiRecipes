@@ -36,6 +36,10 @@ const SearchMeal = () => {
     setQuery(event.target.value);
   };
 
+  const onDeleteHandler = (mealId) => {
+    setMeals((prevState)=>prevState.filter(meal => meal.idMeal!==mealId));
+  };
+
   return (
     <div className="search-meal-design">
       <div className="search-container">
@@ -52,11 +56,12 @@ const SearchMeal = () => {
         {!isLoading && meals.length !== 0 && (
           <MealsContainer>
             {meals.map((meal) => (
-              <MovieItem
-                key={meal.id}
-                image={meal.image}
-                title={meal.title}
-                onClick={() => navigate(`/detail/${meal.id}`)}
+              <MealItem
+                key={meal.idMeal}
+                image={meal.strMealThumb}
+                title={meal.strMeal}
+                onClick={() => navigate(`/detail/${meal.idMeal}`)}
+                onDelete={() => onDeleteHandler(meal.idMeal)}
               />
             ))}
           </MealsContainer>

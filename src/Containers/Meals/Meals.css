@@ -1,4 +1,4 @@
-.popularFilmsDesign {
+.meals-design {
 
     height: 90vh;
 
@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.loadingDesign{
+.loading-design{
     color: white;
     font-size: 10em;
 }

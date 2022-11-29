@@ -1,16 +1,15 @@
-
 import axios from 'axios';
 
-var apiKey = '210d6a5dd3f16419ce349c9f1b200d6d'; ////Use own Api key??????
+var apiKey = '1'; //for educational use
 
-var apiRoot = 'https://api.themoviedb.org/3';
+var apiRoot = 'https://www.themealdb.com/api/json/v1';
 
-export const searchFilms = async (query) => {
+export const searchMeal = async (query) => {
 
-    return axios.get(`${apiRoot}/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=1&include_adult=false`);
+    return axios.get(`${apiRoot}/${apiKey}/search.php?s=${query}`);
 };
 
-export const getPopularFilms = async () => {
+export const getMealDetails = async () => {
 
-    return axios.get(`${apiRoot}/movie/popular?api_key=${apiKey}&language=en-US&page=1&`);
+    return axios.get(`${apiRoot}/${apiKey}/lookup.php?i=${id}`);
 };

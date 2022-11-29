@@ -1,54 +1,47 @@
-import "./PopularFilms.css";
+import "./Meals.css";
 
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { getPopularFilms } from "../../services/apicalls";
+import { getMeals } from "../../services/apicalls";
 
-import MovieContainer from "../../Components/MealsContainer/MealsContainer";
-import MovieItem from "../../Components/MealItem/MealItem";
-import MovieDetail from "../../Components/MealDetail/MealDetail";
+import MealsContainer from "../../Components/MealsContainer/MealsContainer";
+import MealItem from "../../Components/MealItem/MealItem";
 
-const PopularFilms = () => {
-  const [movies, setMovies] = useState([]);
+const Meals = () => {
+  const navigate = useNavigate();
+  const [meals, setMeals] = useState([]);
+  const [category, setCategory] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [selectedMovie, setSelectedMovie] = useState("");
 
   useEffect(() => {
-    //EXECUTED JUST WHEN THE COMPONENT IS MOUNTED
-    getPopularFilms()
-      .then((res) => setMovies(res.data.results))
-      .then(() => setIsLoading(false))
+    getMeals()
+      .then((res) => setMeals(res.data.results))
       .catch((error) => console.log(error));
+    setIsLoading(false)
   }, []);
 
-  const selectMovieHandler = (movie) => {
-    setSelectedMovie(movie);
+  const onDeleteHandler = (mealId) => {
+    seatMeals((prevState)=>prevState.filter(meal => meal.idMeal!==mealId));
   };
 
   return (
-    <div className="popularFilmsDesign">
-      {isLoading && <p className="loadingDesign">IS LOADING...</p>}
+    <div className="meals-design">
+      {isLoading && <p className="loading-design">IS LOADING...</p>}
       {!isLoading && (
-        <MovieContainer>
-          {movies.map((movie) => (
-            <MovieItem
-              key={movie.id}
-              poster={movie.poster_path}
-              title={movie.title}
-              onClick={() => selectMovieHandler(movie)}
+        <MealsContainer>
+          {meals.map((meal) => (
+            <MealItem
+            key={meal.idMeal}
+            image={meal.strMealThumb}
+            title={meal.strMeal}
+            onClick={() => navigate(`/detail/${meal.idMeal}`)}
+            onDelete={() => onDeleteHandler(meal.idMeal)}
             />
           ))}
-        </MovieContainer>
-      )}
-      {!isLoading && selectedMovie && (
-        <MovieDetail
-          key={selectedMovie.id}
-          poster={selectedMovie.poster_path}
-          title={selectedMovie.title}
-          overview={selectedMovie.overview}
-        />
+        </MealsContainer>
       )}
     </div>
   );
 };
-export default PopularFilms;
+export default Meals;
