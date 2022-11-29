@@ -1,34 +1,65 @@
-.meal-item-design{
-    height: 15em;
+.meal-item-design {
+  height: 20em;
+  width: 15em;
 
-    width: 10em;
+  margin: 0.5em;
+  border-radius: 1em;
 
-    margin:1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
-    background-color:  rgb(197, 184, 184);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-
-    cursor: pointer;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.meal-title{
-    font-size: 1em;
-    color: rgb(21, 13, 13);
-    font-weight: bolder;
-    
-}
-.meal-image{
-    height: 12em;
-    transition: 0.5s;
+.meal-item-design:hover {
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
 }
 
-.meal-image:hover{
-    height: 15em;
-    transition: 0.5s;
+.meal-container {
+  height: 18em;
+  width: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.meal-title {
+  font-size: 0.9em;
+  color: rgb(21, 13, 13);
+  font-weight: bolder;
+}
+.meal-image {
+  height: 14em;
+  width: 14em;
+  border-radius: 1em;
+  transition: 0.5s;
 }
 
+.meal-image:hover {
+  height: 15em;
+  width: 15em;
+  transition: 0.5s;
+}
+
+button {
+  height: 2em;
+  width: 10em;
+  background-color: rgb(240, 219, 219);
+  border-radius: 0.5em;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: rgb(219, 163, 154);
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+
+.item-dark-theme-content {
+  color: rgb(240, 219, 219);
+  transition: 0.3s;
+}

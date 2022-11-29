@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './DetailMeal.css';
+import { useDarkThemeContext } from "../../Context/theme-context";
 import { getMealDetails } from '../../services/apicalls';
 import { useParams } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ const DetailMeal = () => {
     useEffect(() => {
         if(mealDetails.length === 0){
             getMealDetails(mealId)
-            .then(res => setMealDetails(res.data.meals))
+            .then(res => setMealDetails(res.data.meals[0]))
             .catch(error => console.log(error))
             console.log(mealDetails)
             console.log(mealDetails?.strMeal)

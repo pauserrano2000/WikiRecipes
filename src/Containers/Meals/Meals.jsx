@@ -3,6 +3,7 @@ import "./Meals.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useDarkThemeContext } from "../../Context/theme-context";
 import { getMeals, getCategories } from "../../services/apicalls";
 
 import MealsContainer from "../../Components/MealsContainer/MealsContainer";
@@ -10,6 +11,7 @@ import MealItem from "../../Components/MealItem/MealItem";
 
 const Meals = () => {
   const navigate = useNavigate();
+  const { darkTheme} = useDarkThemeContext();
   const [meals, setMeals] = useState([]);
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState("Beef"); //default category to search
@@ -38,9 +40,10 @@ const Meals = () => {
   };
 
   return (
-    <div className="meals-design">
+    <div className={`meals-design ${darkTheme ? "meals-dark-theme-background" : ""} `}>
       {categories.length !== 0 && (
         <div className="select-container">
+          <p className={`${darkTheme ? "meals-dark-theme-content" : ""}`}>Filter by category:</p>
           <select className="select" value={category} onChange={selectHandler}>
             {categories.map((category) => (
               <option key={category.idCategory} value={category.strCategory}>
@@ -51,7 +54,7 @@ const Meals = () => {
           </select>
         </div>
       )}
-      {isLoading && <p className="loading-design">IS LOADING...</p>}
+      {isLoading && <p className={`loading-design ${darkTheme ? "meals-dark-theme-content" : ""} `}>IS LOADING...</p>}
       {!isLoading && (
         <MealsContainer>
           {meals.map((meal) => (
