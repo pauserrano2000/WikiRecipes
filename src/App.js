@@ -8,20 +8,22 @@ import Meals from "./Containers/Meals/Meals";
 import DetailMeal from "./Containers/DetailMeal/DetailMeal";
 import AddMeal from "./Containers/AddMeal/AddMeal";
 import SearchMeal from "./Containers/SearchMeal/SearchMeal";
-
+import ThemeContextProvider from "./Context/theme-context";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/meals" element={<Meals />} />
-          <Route path="/detail/:mealId" element={< DetailMeal />} />  {/*Use route params*/ }
-          <Route path="/add" element={< AddMeal />} /> 
-          <Route path="/search" element={< SearchMeal />} /> 
-        </Routes>
-      </BrowserRouter>
+      <ThemeContextProvider>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/meals" element={<Meals />} />
+            <Route path="/detail/:mealId" element={<DetailMeal />} />
+            <Route path="/add" element={<AddMeal />} />
+            <Route path="/search" element={<SearchMeal />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeContextProvider>
     </div>
   );
 }

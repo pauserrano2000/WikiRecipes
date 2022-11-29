@@ -1,13 +1,15 @@
 import "./MealItem.css";
+import { useDarkThemeContext } from "../../Context/theme-context";
 
 const MealItem = (props) => {
+  const { darkTheme} = useDarkThemeContext();
   return (
     <div className="meal-item-design">
-      <div onClick={props.onClick}>
+      <div className="meal-container" onClick={props.onClick}>
         <img className="meal-image" src={props.image} alt={props.title} />
+        <p className={`meal-title ${darkTheme ? "item-dark-theme-content" : ""} `}>{props.title}</p>
       </div>
-      <div className="meal-title">{props.title}</div>
-      <button onClick={props.onDelete}>Delete</button>
+      <button onClick={props.onDelete}>Remove</button>
     </div>
   );
 };

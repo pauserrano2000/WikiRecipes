@@ -1,44 +1,59 @@
 .home-design {
+  height: 90vh;
 
-    height: 90vh;
+  width: 100vw;
 
-    width: 100vw;
+  background-color: rgb(254, 252, 243);
 
-    background-color: rgb(197, 184, 184);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-design {
-    color: rgb(21, 13, 13);
-    font-size: 10em;
+  color: rgb(21, 13, 13);
+  font-size: 9em;
 }
 
 .content-design:hover {
-    font-size: 11em;
-    transition: 0.5s;
+  font-size: 10em;
+  transition: 0.5s;
 }
-.button-container-design{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.button-container-design {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .button-design {
-    border: 0.3em solid rgb(147, 94, 94);
-    border-radius: 0.5em;
-    padding: 0.5em;
-    color: rgb(21, 13, 13);
-    font-size: 2em;
-    margin: 2em;
-    cursor: pointer;
+  border: 0.3em solid rgb(219, 163, 154);
+  background-color: rgb(245, 235, 224);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  color: rgb(21, 13, 13);
+  font-size: 2em;
+  margin: 2em;
+  cursor: pointer;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.3);
 }
 
 .button-design:hover {
-    background-color:rgb(255, 255, 255);
-    font-size: 3em;
-    transition: 0.5s;
+  font-size: 2.5em;
+  transition: 0.5s;
+}
+
+.home-dark-theme-background {
+  background-color:rgb(21, 0, 80);
+  transition: 0.3s;
+}
+
+.home-button-dark-theme-background {
+    background-color:rgb(63, 0, 113);
+    border-color: black;
+  }
+
+.home-dark-theme-content {
+  color: rgb(240, 219, 219);
+  transition: 0.3s;
 }

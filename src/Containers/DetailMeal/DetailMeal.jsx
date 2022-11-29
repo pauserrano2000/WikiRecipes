@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import './DetailMeal.css';
+import { useDarkThemeContext } from "../../Context/theme-context";
 import { getMealDetails } from '../../services/apicalls';
 import { useParams } from 'react-router-dom';
 
