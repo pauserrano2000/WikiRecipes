@@ -37,7 +37,7 @@ const SearchMeal = () => {
   };
 
   const onDeleteHandler = (mealId) => {
-    setMeals((prevState)=>prevState.filter(meal => meal.idMeal!==mealId));
+    setMeals((prevState) => prevState.filter((meal) => meal.idMeal !== mealId));
   };
 
   return (
@@ -53,7 +53,10 @@ const SearchMeal = () => {
       </div>
       <div className="search-content-container">
         {isLoading && <p className="loading-design">Is loading....</p>}
-        {!isLoading && meals.length !== 0 && (
+        {!isLoading && (meals === null) && (
+          <p className="no-results-design">No results...(try another name)</p>
+        )}
+        {!isLoading && (meals !== null) && (
           <MealsContainer>
             {meals.map((meal) => (
               <MealItem
