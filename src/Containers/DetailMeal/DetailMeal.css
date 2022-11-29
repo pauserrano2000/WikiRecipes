@@ -1,0 +1,45 @@
+.detailMealDesign {
+
+    height: 42em;
+    width: 30em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+
+    color: white;
+    font-weight: bold;
+
+}
+
+.titleDesign {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+.detailPic img {
+    height: 26em;
+    width: 20em;
+    object-fit: cover;
+}
+
+.sinopseDesign {
+    font-size: 1.5rem;
+    text-align: left !important;
+}
+
+.descriptionDesign {
+    margin-top: 1em;
+    white-space: pre-line;
+    width: 28em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffffB3;
+}
+
+.descriptionDesign:hover {
+    overflow: visible;
+    -ms-text-size-adjust: 50em;
+}
