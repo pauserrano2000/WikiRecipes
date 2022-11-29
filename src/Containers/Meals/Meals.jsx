@@ -16,7 +16,7 @@ const Meals = () => {
 
   useEffect(() => {
     getMeals(category)
-      .then((res) => setMeals(res.data.results))
+      .then((res) => setMeals(res.data.meals))
       .catch((error) => console.log(error));
     setIsLoading(false)
   }, []);

@@ -20,7 +20,7 @@ const SearchMeal = () => {
       if (query) {
         setIsLoading(true);
         searchMeal(query)
-          .then((res) => setMeals(res.data.results))
+          .then((res) => setMeals(res.data.meals))
           .catch((error) => console.log(error));
         setIsLoading(false);
         setQuery("");
