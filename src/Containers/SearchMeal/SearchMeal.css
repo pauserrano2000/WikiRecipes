@@ -1,4 +1,4 @@
-.searchFilmsDesign {
+.search-meal-design {
 
     height: 90vh;
 
@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.searchContainer{
+.search-meal-container{
     height: 10vh;
     width: 100vw;
     display: flex;
@@ -26,7 +26,7 @@
     width: 30vw;
 }
 
-.searchContentContainer{
+.search-content-container{
     height: 80vh;
     width: 100vw;
     display: flex;
@@ -35,7 +35,7 @@
     align-items: center;
 
 }
-.loadingDesign{
+.loading-design{
     color: white;
     font-size: 10em;
 }

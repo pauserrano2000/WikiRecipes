@@ -1,26 +1,26 @@
-import "./SearchFilms.css";
+import "./SearchMeal.css";
 
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { searchFilms } from "../../services/apicalls";
+import { searchMeal } from "../../services/apicalls";
 
-import MovieContainer from "../../Components/MealsContainer/MealsContainer";
-import MovieItem from "../../Components/MealItem/MealItem";
-import MovieDetail from "../../Components/MealDetail/MealDetail";
+import MealsContainer from "../../Components/MealsContainer/MealsContainer";
+import MealItem from "../../Components/MealItem/MealItem";
 
-const SearchFilms = () => {
-  const [movies, setMovies] = useState([]);
+const SearchMeal = () => {
+  const navigate = useNavigate();
+  const [meals, setMeals] = useState([]);
   const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState("");
 
   useEffect(() => {
     //EXECUTED WHEN THE USER STOPS WRITING 1SEC
-    const identifier = setTimeout(() => {
+    const timer = setTimeout(() => {
       if (query) {
         setIsLoading(true);
-        searchFilms(query)
-          .then((res) => setMovies(res.data.results))
+        searchMeal(query)
+          .then((res) => setMeals(res.data.results))
           .catch((error) => console.log(error));
         setIsLoading(false);
         setQuery("");
@@ -29,52 +29,41 @@ const SearchFilms = () => {
       }
     }, 1000);
 
-    return () => clearTimeout(identifier);
+    return () => clearTimeout(timer);
   }, [query]);
 
   const searchHandler = (event) => {
     setQuery(event.target.value);
   };
 
-  const selectMovieHandler = (movie) => {
-    setSelectedMovie(movie);
-  };
   return (
-    <div className="searchFilmsDesign">
-      <div className="searchContainer">
+    <div className="search-meal-design">
+      <div className="search-container">
         <input
           className="search"
           type="search"
-          placeholder="Introduce the title.."
+          placeholder="Introduce the name..."
           onChange={searchHandler}
           value={query}
         />
       </div>
-      <div className="searchContentContainer">
-      {isLoading && <p className="loadingDesign">Is loading....</p>}
-      {!isLoading && movies.length !== 0 && (
-        <MovieContainer>
-          {movies.map((movie) => (
-            <MovieItem
-              key={movie.id}
-              poster={movie.poster_path}
-              title={movie.title}
-              onClick={() => selectMovieHandler(movie)}
-            />
-          ))}
-        </MovieContainer>
-      )}
-      {selectedMovie && (
-        <MovieDetail
-          key={selectedMovie.id}
-          poster={selectedMovie.poster_path}
-          title={selectedMovie.title}
-          overview={selectedMovie.overview}
-        ></MovieDetail>
-      )}
+      <div className="search-content-container">
+        {isLoading && <p className="loading-design">Is loading....</p>}
+        {!isLoading && meals.length !== 0 && (
+          <MealsContainer>
+            {meals.map((meal) => (
+              <MovieItem
+                key={meal.id}
+                image={meal.image}
+                title={meal.title}
+                onClick={() => navigate(`/detail/${meal.id}`)}
+              />
+            ))}
+          </MealsContainer>
+        )}
       </div>
     </div>
   );
 };
 
-export default SearchFilms;
+export default SearchMeal;
