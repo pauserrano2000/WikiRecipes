@@ -1,4 +1,4 @@
-.detailMealDesign {
+.detail-meal-design {
     height: 100%;
     width: 100%;
     background-color: rgb(197, 184, 184);
@@ -19,7 +19,7 @@
 }
 
 
-.titleDesign {
+.title-design {
     font-size: 1.5em;
     padding: 0.5em;
 }
