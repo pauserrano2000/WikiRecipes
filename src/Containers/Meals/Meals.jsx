@@ -22,7 +22,7 @@ const Meals = () => {
   }, []);
 
   const onDeleteHandler = (mealId) => {
-    seatMeals((prevState)=>prevState.filter(meal => meal.idMeal!==mealId));
+    setMeals((prevState)=>prevState.filter(meal => meal.idMeal!==mealId));
   };
 
   return (
