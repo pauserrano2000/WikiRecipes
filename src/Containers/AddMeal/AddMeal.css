@@ -1,0 +1,60 @@
+.addMealDesign {
+    height: 65vh;
+    width: 100vw;
+    background-color: rgb(197, 184, 184);
+}
+
+.formDesign {
+    height: 25vh;
+    width: 100vw;
+    display: inline-block;
+    flex-direction: column;
+}
+
+.selectContainerDesign {
+    position: relative;
+}
+
+.basicInput {
+    margin: 1em;
+    height: 3em;
+    width: 80%;
+    border-radius: 1%;
+    border: 0.2em solid darkcyan;
+}
+
+.errorInput {
+    border: 0.2em solid red;
+    color: red;
+}
+
+.errorMsg {
+    color: red;
+    text-align: center;
+}
+
+.registerButton {
+
+    height: 2em;
+    width: 6em;
+    margin: 1.5em;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    background-color: red;
+
+    border-radius: 1%;
+
+    transition: 0.2s
+
+}
+
+.registerButton:hover {
+
+    transition: 0.2s;
+    background-color: darkred;
+}
