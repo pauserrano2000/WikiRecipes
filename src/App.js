@@ -19,8 +19,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/meals" element={<Meals />} />
             <Route path="/detail/:mealId" element={<DetailMeal />} />
-            <Route path="/add" element={<AddMeal />} />
             <Route path="/search" element={<SearchMeal />} />
+            <Route path="/add" element={<AddMeal />} />
           </Routes>
         </BrowserRouter>
       </ThemeContextProvider>

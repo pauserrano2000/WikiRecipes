@@ -34,17 +34,6 @@ const Header = () => {
           Meals
         </NavLink>
         <NavLink
-          to="/add"
-          className={({ isActive }) =>
-            [
-              isActive ? "active-link-design" : "link-design",
-              darkTheme ? "dark-theme-content" : "",
-            ].join(" ")
-          }
-        >
-          Add meal
-        </NavLink>
-        <NavLink
           to="/search"
           className={({ isActive }) =>
             [
@@ -54,6 +43,17 @@ const Header = () => {
           }
         >
           Search
+        </NavLink>
+        <NavLink
+          to="/add"
+          className={({ isActive }) =>
+            [
+              isActive ? "active-link-design" : "link-design",
+              darkTheme ? "dark-theme-content" : "",
+            ].join(" ")
+          }
+        >
+          Add meal
         </NavLink>
       </div>
       <input type="checkbox" id="switch" onChange={toggleHandler} />
