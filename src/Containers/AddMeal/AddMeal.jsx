@@ -60,23 +60,16 @@ const AddMeal = () => {
   const registerMe = () => {
     let error = "";
 
-    const registerMe = () => {
-        let error = "";
-
         if (newMeal.length !== 0 && error === "") {
             const convertido = JSON.stringify(newMeal);
             console.log(convertido);
             localStorage.setItem("dataNewMeal.json", convertido);
-            let dataFromStorage = localStorage.getItem("dataNewMeal");
-            let objetoReconvertido = JSON.parse(dataFromStorage);
-            console.log(objetoReconvertido);
             setFormReport('The new Meal was created');
             console.log(formReport)
         } else {
             setFormReport('Please enter some data or/and solve the errors!!!');
             console.log(formReport)
         }
-    }
   };
 
   return (
