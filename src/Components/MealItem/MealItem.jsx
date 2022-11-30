@@ -9,7 +9,7 @@ const MealItem = (props) => {
         <img className="meal-image" src={props.image} alt={props.title} />
         <p className={`meal-title ${darkTheme ? "item-dark-theme-content" : ""} `}>{props.title}</p>
       </div>
-      <button className={"item-button"} onClick={props.onDelete}>Remove</button>
+      <button className={`item-button ${darkTheme ? "button-item-dark-theme" : ""} `} onClick={props.onDelete}>Remove</button>
     </div>
   );
 };
