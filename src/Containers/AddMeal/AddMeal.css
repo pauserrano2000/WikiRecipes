@@ -41,6 +41,10 @@
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.3);
 }
 
+textarea {
+  resize: none;
+}
+
 .error-input {
   border: 0.2em solid red;
   color: red;
