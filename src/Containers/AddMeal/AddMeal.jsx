@@ -59,7 +59,7 @@ const AddMeal = () => {
 
   const registerMe = () => {
 
-        if (newMeal.length !== 0 && newMealError.length === 0) {
+        if (newMeal.length !== 0 && newMealError.length === undefined) {
             const convertido = JSON.stringify(newMeal);
             console.log(convertido);
             localStorage.setItem("dataNewMeal.json", convertido);
