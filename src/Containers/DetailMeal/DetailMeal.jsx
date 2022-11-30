@@ -28,7 +28,11 @@ const DetailMeal = () => {
   const separateLines = mealDetails?.strInstructions?.split("\r\n");
 
   return (
-    <div className="detail-meal-design">
+    <div
+      className={`detail-meal-design ${
+        darkTheme ? "detail-dark-theme-background" : ""
+      } `}
+    >
       {isLoading && (
         <p
           className={`loading-design ${
@@ -50,35 +54,61 @@ const DetailMeal = () => {
       {!isLoading && mealDetails !== null && (
         <>
           <div className="title-design">
-            <h1>{mealDetails?.strMeal}</h1>
+            <h1
+              className={`title-design-content ${
+                darkTheme ? "detail-dark-theme-content" : ""
+              }`}
+            >
+              {mealDetails?.strMeal}
+            </h1>
           </div>
-          <div className="collumns">
-            <div className="leftSide">
-              <div className="detailPic">
-                <center>
-                  <img
-                    src={mealDetails?.strMealThumb}
-                    alt={mealDetails?.strMeal}
-                  />
-                </center>
-              </div>
-              <div className="categoryDesign">
-                <div className="textDesign">
+          <div className="collumns-container">
+            <div className="left-container">
+              <img
+                className="detail-img"
+                src={mealDetails?.strMealThumb}
+                alt={mealDetails?.strMeal}
+              />
+
+              <div className="category-design">
+                <div
+                  className={`text-design ${
+                    darkTheme ? "detail-dark-theme-content" : ""
+                  }`}
+                >
                   Origin Country: <strong>{mealDetails?.strArea}</strong>
                 </div>
-                <div className="textDesign">
+                <div
+                  className={`text-design ${
+                    darkTheme ? "detail-dark-theme-content" : ""
+                  }`}
+                >
                   Category: <strong>{mealDetails?.strCategory}</strong>
                 </div>
-                <div className="textDesign">
+                <div
+                  className={`text-design ${
+                    darkTheme ? "detail-dark-theme-content" : ""
+                  }`}
+                >
                   <a href={mealDetails?.strYoutube} target="_blank">
                     Video tutorial
                   </a>
                 </div>
               </div>
             </div>
-            <div className="rightSide">
-              <h2>Method:</h2>
-              <div className="descriptionDesign">
+            <div className="right-container">
+              <h2
+                className={`title-right-design ${
+                  darkTheme ? "detail-dark-theme-content" : ""
+                }`}
+              >
+                Method
+              </h2>
+              <div
+                className={`description-design ${
+                  darkTheme ? "detail-dark-theme-content" : ""
+                }`}
+              >
                 {separateLines?.map((line, index) => {
                   return <p key={index}>{line}</p>;
                 })}

@@ -1,48 +1,113 @@
 .detail-meal-design {
-    height: 100%;
-    width: 100%;
-    background-color: rgb(197, 184, 184);
-}
+  height: 90vh;
 
-.collumns {
-    display: flex;
-    padding: 2em;
-}
+  width: 100vw;
+  background-color: rgb(254, 252, 243);
 
-.leftSide {
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.rightSide {
-    width: 60%;
-    padding-left: 2em;
-}
-
 
 .title-design {
-    font-size: 1.5em;
-    padding: 0.5em;
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.detailPic img {
-    width: 90%;
-    object-fit: contain;
+.title-design-content {
+  font-size: 2.9em;
+  font-weight: bolder;
+  transition: 0.5s;
 }
 
-.categoryDesign {
-    display: inline-flex;
-    padding: 1em;
+.title-design-content:hover {
+  font-size: 3.5em;
+  transition: 0.5s;
 }
 
-.textDesign {
-    padding: 1em;
+.collumns-container {
+  height: 75vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.descriptionDesign {
-    line-height: 1.6;
-    text-align: initial;
+.left-container {
+  height: 75vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h2 {
-    text-align: left;
+.detail-img {
+  height: 35em;
+  width: 35em;
+  border-radius: 1em;
+  transition: 0.5s;
+}
+.detail-img:hover {
+  height: 40em;
+  width: 40em;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+
+.category-design {
+  display: inline-flex;
+  padding: 1em;
+}
+
+.text-design {
+  padding: 1em;
+}
+
+.right-container {
+    height: 75vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+.description-design {
+  height: 70vh;
+  width: 50vw;
+  overflow: auto;
+}
+
+.title-right-design {
+  height: 5vh;
+  width: 50vw;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.loading-design {
+  color: white;
+  font-size: 10em;
+}
+
+.no-results-design {
+  color: rgb(0, 0, 0);
+  font-size: 9em;
+}
+
+.detail-dark-theme-background {
+  background-color: rgb(21, 0, 80);
+  transition: 0.3s;
+}
+
+.detail-dark-theme-content {
+  color: rgb(240, 219, 219);
+  transition: 0.3s;
 }
