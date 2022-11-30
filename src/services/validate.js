@@ -24,7 +24,7 @@ export const errorCheck = (name, value) => {
 
         case "picture":
             if (! /(https:\/\/)([^\s(["<,>/]*)(\/)[^\s[",><]*(.png|.jpg)(\?[^\s[",><]*)?/.test(value)) {
-                return "Picture format is invalid"
+                return "Picture format is invalid (.png or .jpg)"
             } else {
                 return "";
             }

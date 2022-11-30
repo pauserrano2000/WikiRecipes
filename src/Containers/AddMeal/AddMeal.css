@@ -1,61 +1,73 @@
-.addMealDesign {
-    height: 90vh;
-
-    width: 100vw;
-    background-color: rgb(254, 252, 243);
+.add-meal-design {
+  height: 90vh;
+  width: 100vw;
+  background-color: rgb(254, 252, 243);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.formDesign {
-    height: 25vh;
-    width: 100vw;
-    display: inline-block;
-    flex-direction: column;
+.form-design {
+  height: 80vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .selectContainerDesign {
-    position: relative;
+  position: relative;
 }
 
 .basicInput {
-    margin: 1em;
-    height: 3em;
-    width: 80%;
-    border-radius: 1%;
-    border: 0.2em solid darkcyan;
+  margin: 1em;
+  height: 3em;
+  width: 80%;
+  border-radius: 1%;
+  border: 0.2em solid darkcyan;
 }
 
 .errorInput {
-    border: 0.2em solid red;
-    color: red;
+  border: 0.2em solid red;
+  color: red;
 }
 
 .errorMsg {
-    color: red;
-    text-align: center;
+  color: red;
+  text-align: center;
 }
 
 .registerButton {
+  height: 2em;
+  width: 6em;
+  margin: 1.5em;
 
-    height: 2em;
-    width: 6em;
-    margin: 1.5em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  color: white;
+  background-color: red;
 
-    color: white;
-    background-color: red;
+  border-radius: 1%;
 
-    border-radius: 1%;
-
-    transition: 0.2s
-
+  transition: 0.2s;
 }
 
 .registerButton:hover {
+  transition: 0.2s;
+  background-color: darkred;
+}
 
-    transition: 0.2s;
-    background-color: darkred;
+.add-dark-theme-background {
+  background-color: rgb(21, 0, 80);
+  transition: 0.3s;
+}
+
+.add-dark-theme-content {
+  color: rgb(240, 219, 219);
+  transition: 0.3s;
 }
