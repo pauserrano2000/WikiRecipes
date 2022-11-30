@@ -55,6 +55,7 @@ const AddMeal = () => {
 
     const selectHandler = (event) => {
         setCategory(event.target.value);
+        inputHandler(event);
       };
 
     const registerMe = () => {
@@ -66,11 +67,11 @@ const AddMeal = () => {
             let dataFromStorage = localStorage.getItem("dataNewMeal");
             let objetoReconvertido = JSON.parse(dataFromStorage);
             console.log(objetoReconvertido);
-            formReport = 'The new Meal was created';
-            console.log(formReport)
+/*            formReport = 'The new Meal was created';
+            console.log(formReport)*/
         } else {
-            formReport = 'Please solve all the errors!!!';
-            console.log(formReport)
+/*            formReport = 'Please solve all the errors!!!';
+            console.log(formReport)*/
         }
     }
 
@@ -105,7 +106,7 @@ const AddMeal = () => {
                 {categories.length !== 0 && (
                     <div className="custom-select">
                         <label for="name">Category:</label>
-                        <select className="select" value={category} onChange={selectHandler}>
+                        <select className="select" name="category" value={category} onChange={selectHandler}>
                             {categories.map((category) => (
                                 <option key={category.idCategory} value={category.strCategory}>
                                     {" "}
