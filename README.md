@@ -7,7 +7,7 @@ The App is a frontend application to access and consult the content in [The Meal
 ## Specifications
 The App has 5 pages:
 - **Home:** Welcome to the page.
-- **Meals:** You can see and filter all the meals by categoryand select one to view the details (redirect to detail view).  Also meal deletion available.
+- **Meals:** You can see and filter all the meals by category and select one to view the details (redirect to detail view).  Also meal deletion available.
 - **Search:** You can search for recipies by name and select one to view the details (redirect to detail view). Also meal deletion available.
 The search bar starts to search after the user stops typing with a delay of 1 second. Afterwards, the value of the search bar is cleared.
 - **Detail:** Detail info of the selected meal. It gets the id meal from route params.
