@@ -25,8 +25,7 @@ const AddMeal = () => {
 
     const [categories, setCategories] = useState([]);
     const [category, setCategory] = useState('');
-    // const [formReport, setFormReport] = useState('');
-    const formReport = '';
+    const [formReport, setFormReport] = useState('');
 
     const inputHandler = (e) => {
         setNewMeal((prevState) => ({
@@ -61,17 +60,18 @@ const AddMeal = () => {
     const registerMe = () => {
         let error = "";
 
-        if (newMeal !== [] && error === "") {
-            let convertido = JSON.stringify(newMeal);
-            localStorage.setItem("dataNewMeal", convertido);
+        if (newMeal.length !== 0 && error === "") {
+            const convertido = JSON.stringify(newMeal);
+            console.log(convertido);
+            localStorage.setItem("dataNewMeal.json", convertido);
             let dataFromStorage = localStorage.getItem("dataNewMeal");
             let objetoReconvertido = JSON.parse(dataFromStorage);
             console.log(objetoReconvertido);
-/*            formReport = 'The new Meal was created';
-            console.log(formReport)*/
+            setFormReport('The new Meal was created');
+            console.log(formReport)
         } else {
-/*            formReport = 'Please solve all the errors!!!';
-            console.log(formReport)*/
+            setFormReport('Please enter some data or/and solve the errors!!!');
+            console.log(formReport)
         }
     }
 
