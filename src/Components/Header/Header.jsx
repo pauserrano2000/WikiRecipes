@@ -57,7 +57,7 @@ const Header = () => {
         </NavLink>
       </div>
       <input type="checkbox" id="switch" onChange={toggleHandler} />
-      <label htmlFor="switch"></label>
+      <label className="label-toggle" htmlFor="switch"></label>
     </div>
   );
 };

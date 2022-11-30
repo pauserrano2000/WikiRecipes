@@ -68,7 +68,7 @@
   visibility: hidden;
 }
 
-label {
+.label-toggle {
   width: 5em;
   height: 2.5em;
   border-radius: 1.5em;
@@ -80,7 +80,7 @@ label {
   background-color:rgb(245, 235, 224);
 }
 
-label:after {
+.label-toggle:after {
   width: 2em;
   height: 2em;
   border-radius: 50%;
@@ -94,11 +94,11 @@ label:after {
   transition: 0.3s;
 }
 
-input:checked + label {
+input:checked + .label-toggle {
   background: rgb(63, 0, 113);
 }
 
-input:checked + label:after {
+input:checked + .label-toggle:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }
