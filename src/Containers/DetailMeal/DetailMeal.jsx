@@ -59,42 +59,41 @@ const DetailMeal = () => {
                 darkTheme ? "detail-dark-theme-content" : ""
               }`}
             >
-              {mealDetails?.strMeal}
+              {mealDetails.strMeal}
             </h1>
           </div>
-          <div className="collumns-container">
+          <div className="columns-container">
             <div className="left-container">
+              <div className="category-design">
+                <h2
+                  className={`category-content-design ${
+                    darkTheme ? "detail-dark-theme-content" : ""
+                  }`}
+                >
+                  Origin Country: {mealDetails.strArea}
+                </h2>
+                <h2
+                  className={`category-content-design ${
+                    darkTheme ? "detail-dark-theme-content" : ""
+                  }`}
+                >
+                  Category: {mealDetails.strCategory}
+                </h2>
+                <a
+                  className={`category-content-design ${
+                    darkTheme ? "detail-dark-theme-content" : ""
+                  }`}
+                  href={mealDetails.strYoutube}
+                  target="_blank"
+                >
+                  Video tutorial
+                </a>
+              </div>
               <img
                 className="detail-img"
-                src={mealDetails?.strMealThumb}
-                alt={mealDetails?.strMeal}
+                src={mealDetails.strMealThumb}
+                alt={mealDetails.strMeal}
               />
-
-              <div className="category-design">
-                <div
-                  className={`text-design ${
-                    darkTheme ? "detail-dark-theme-content" : ""
-                  }`}
-                >
-                  Origin Country: <strong>{mealDetails?.strArea}</strong>
-                </div>
-                <div
-                  className={`text-design ${
-                    darkTheme ? "detail-dark-theme-content" : ""
-                  }`}
-                >
-                  Category: <strong>{mealDetails?.strCategory}</strong>
-                </div>
-                <div
-                  className={`text-design ${
-                    darkTheme ? "detail-dark-theme-content" : ""
-                  }`}
-                >
-                  <a href={mealDetails?.strYoutube} target="_blank">
-                    Video tutorial
-                  </a>
-                </div>
-              </div>
             </div>
             <div className="right-container">
               <h2
@@ -110,7 +109,7 @@ const DetailMeal = () => {
                 }`}
               >
                 {separateLines?.map((line, index) => {
-                  return <p key={index}>{line}</p>;
+                  return <p className="description-content-design" key={index}>{line}</p>;
                 })}
               </div>
             </div>
