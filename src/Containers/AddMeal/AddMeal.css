@@ -17,19 +17,31 @@
   align-items: center;
 }
 
-.selectContainerDesign {
-  position: relative;
-}
+.basic-input {
+  height: 1.5em;
+  width: 20em;
 
-.basicInput {
   margin: 1em;
-  height: 3em;
-  width: 80%;
-  border-radius: 1%;
+
+  font-size: 1.5em;
+  border-radius: 0.3em;
   border: 0.2em solid darkcyan;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.3);
 }
 
-.errorInput {
+.basic-text {
+  height: 10em;
+  width: 20em;
+
+  margin: 1em;
+
+  font-size: 2em;
+  border-radius: 0.3em;
+  border: 0.2em solid darkcyan;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.3);
+}
+
+.error-input {
   border: 0.2em solid red;
   color: red;
 }

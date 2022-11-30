@@ -82,71 +82,70 @@ const AddMeal = () => {
       } `}
     >
       <div className="form-design">
-        <label className={`${darkTheme ? "detail-dark-theme-content" : ""}`} for="name">Name:</label>
         <input
           placeholder="Name"
           type="name"
           name="name"
           className={
             newMealError.nameError === ""
-              ? "basicInput"
-              : "basicInput errorInput"
+              ? "basic-input"
+              : "basic-input error-input"
           }
           onChange={(e) => inputHandler(e)}
           onBlur={(e) => errorHandler(e)}
         />
         <div className="errorMsg">{newMealError.nameError}</div>
-        <label className={`${darkTheme ? "detail-dark-theme-content" : ""}`} for="country">Country:</label>
+
         <input
           placeholder="Origin Country"
           type="country"
           name="country"
           className={
             newMealError.countryError === ""
-              ? "basicInput"
-              : "basicInput errorInput"
+              ? "basic-input"
+              : "basic-input error-input"
           }
           onChange={(e) => inputHandler(e)}
           onBlur={(e) => errorHandler(e)}
         />
         <div className="errorMsg">{newMealError.countryError}</div>
-        <label className={`${darkTheme ? "detail-dark-theme-content" : ""}`} for="picture">Picture:</label>
+
         <input
           placeholder="Picture URL"
           type="picture"
           name="picture"
           className={
             newMealError.pictureError === ""
-              ? "basicInput"
-              : "basicInput errorInput"
+              ? "basic-input"
+              : "basic-input error-input"
           }
           onChange={(e) => inputHandler(e)}
           onBlur={(e) => errorHandler(e)}
         />
         <div className="errorMsg">{newMealError.pictureError}</div>
-        <label className={`${darkTheme ? "detail-dark-theme-content" : ""}`} for="video">Video:</label>
+
         <input
           placeholder="Video URL"
           type="video"
           name="video"
           className={
             newMealError.videoError === ""
-              ? "basicInput"
-              : "basicInput errorInput"
+              ? "basic-input"
+              : "basic-input error-input"
           }
           onChange={(e) => inputHandler(e)}
           onBlur={(e) => errorHandler(e)}
         />
         <div className="errorMsg">{newMealError.videoError}</div>
-        <label className={`${darkTheme ? "detail-dark-theme-content" : ""}`} for="instructions">Method:</label>
+
         <textarea
           placeholder="Method"
           type="instructions"
           name="instructions"
           className={
             newMealError.instructionsError === ""
-              ? "basicInput"
-              : "basicInput errorInput"
+              ? "basic-text"
+              : "basic-text error-input"
           }
           onChange={(e) => inputHandler(e)}
           onBlur={(e) => errorHandler(e)}
@@ -154,7 +153,6 @@ const AddMeal = () => {
         <div className="errorMsg">{newMealError.instructionsError}</div>
         {categories.length !== 0 && (
           <div className="custom-select">
-            <label className={`${darkTheme ? "detail-dark-theme-content" : ""}`} for="name">Category:</label>
             <select
               className="select"
               name="category"

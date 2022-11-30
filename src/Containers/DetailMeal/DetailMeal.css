@@ -77,6 +77,10 @@
   color: black;
 }
 
+a:hover{
+    color:red; 
+}
+
 .right-container {
   height: 75vh;
   width: 50vw;
